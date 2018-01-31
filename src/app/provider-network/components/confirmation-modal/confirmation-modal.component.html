@@ -1,0 +1,23 @@
+ <!-- Modal -->
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header btn-primary">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{modalTitle[0]}}</h4>
+           <p>{{modalTitle[1]}}</p> 
+        </div>
+        <div class="modal-body">
+           <!-- single slot transclusion here -->
+          <ng-content select="[modal-data]"></ng-content>
+        </div>
+        <div class="modal-footer">
+  
+          <button  type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button  type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>

@@ -1,0 +1,56 @@
+
+<div class="row">
+    <div class="col-md-12" style="padding-top: 15px;">
+        <h5>{{occurencevalue.newOccurenceId}} Scenarios</h5> 
+        <div *ngIf="!occurencevalue.scenarios ? true : undefined">
+            There are no scenarios defined for this occurrence
+        </div>
+        <div *ngIf="occurencevalue.scenarios">
+            <div *ngFor="let scenario of occurencevalue.scenarios; let index = index;">
+                <div class="scenario-panel" (click)="current = index">Scenario
+                    <i class="glyphicon pull-right" style="color:rgb(140, 128, 128)" [class.glyphicon-chevron-right]="current != index"
+                    [class.glyphicon-chevron-down]="current == index"></i>
+                </div>
+                <div class="row" [class.collapse]="current != index">
+                    <div class="col-md-12 p-15"><i class="fa fa-minus" style="margin-right:8px" (click)="current = -1"></i>{{scenario.scenarioName}} <a class="pull-right padding" (click)="deleteScenario()" >Delete Scenario</a>  <a  class="padding pull-right" >View Defaults</a> &nbsp;&nbsp;<a  class="pull-right padding" (click)="editScenario(scenario, index)"  data-toggle="modal" data-target="#myModaledit">edit</a></div>
+                    <div class="col-md-12 p-15">
+                        <div class="col-md-5 p-l-0 ">Field </div>
+                        <div class="col-md-2">Qualifier</div>
+                        <div class="col-md-5 p-0">Value</div>
+                    </div>  
+                    <hr>  
+                    <div class="col-md-12 p-15" *ngIf="scenario.networkLevelId">
+                        <div class="col-md-5 p-l-0 inline-grid">Network Level</div>
+                        <div class="col-md-2 inline-grid"><select class="form-control" value="=" ><option>=</option></select>  </div>
+                        <div class="col-md-5 p-0 inline-grid">
+                            <!-- <select disabled class="form-control"  [(ngModel)]="scenario.networkLevelId">
+                                    <option   *ngFor="let data of dropDownData.networkLevels" value={{data.networkLevelId}}>{{data.networkLevelName}}</option>
+                                </select> -->
+                            <input type="text" [(ngModel)]="scenario.networkLevelId">  
+                        </div>
+                    </div>
+                    <div class="col-md-12 p-15" *ngIf="scenario.placeOfServiceId" >
+                        <div class="col-md-5 p-l-0 inline-grid">Place of Service</div>
+                        <div class="col-md-2 inline-grid"><select class="form-control" value="=" ><option>=</option></select>  </div>
+                        <div class="col-md-5 p-0 inline-grid">
+                            <!-- <select disabled  class="form-control"  [(ngModel)]="scenario.placeOfServiceId">
+                                    <option *ngFor="let data of dropDownData.placeOfServices" value={{data.placeOfServiceId}}>{{data.placeOfServiceName}}</option>
+                                </select> -->  <input type="text" [(ngModel)]="scenario.placeOfServiceId">
+                        </div>
+                    </div>
+                    <div class="col-md-12 p-15" *ngIf="scenario.claimTypeId">
+                        <div class="col-md-5 p-l-0 inline-grid">Claim Type</div>
+                        <div class="col-md-2 inline-grid"><select class="form-control" value="=" ><option>=</option></select>  </div>
+                        <div class="col-md-5 p-0 inline-grid">
+                            <!-- <select  disabled class="form-control"  [(ngModel)]="scenario.claimTypeId">
+                                    <option *ngFor="let data of dropDownData.claimTypes" value={{data.claimTypeId}}>{{data.claimTypeName}}</option>
+                                </select> -->
+                                <input type="text" [(ngModel)]="scenario.claimTypeId">  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scenario-button" data-toggle="modal" data-target="#myModal">Add Scenario</div>
+    </div>
+  </div>

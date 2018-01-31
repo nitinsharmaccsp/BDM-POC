@@ -1,0 +1,46 @@
+.font-style{
+    font-size: 30px;
+ }
+ .btn{
+     margin-bottom:10px;
+ }
+ .btn{
+     border-radius: 0px;
+ }
+ form{
+     margin-bottom:30px;
+     padding-left:5px;
+ }
+ .box-shadow--4dp {
+     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+ }
+ input[type=checkbox] {
+     transform: scale(1.5);
+   }
+ .position{
+     bottom:0px;
+ }
+ .cost-breadcrumb
+ {
+     font-weight: 500;
+     font-style: normal;
+     font-family: roboto;
+     text-decoration: underline;
+     display: inline-block;
+     padding: 0 8px;
+ }
+ .p-0
+ {
+     padding: 0px;
+ }
+ .p-l-0
+ {
+     padding-left: 0px;
+ }
+ .p-b-30
+ {
+     padding-bottom: 30px;
+ }
+ .footer {
+     margin-top:70px;
+ }

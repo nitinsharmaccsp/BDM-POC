@@ -1,0 +1,103 @@
+<div class="col-md-12">
+
+  <!-- Including the breadcrumb component -->
+  <app-bdm-breadcrumb class="col-md-12" [breadcrumbdata]="Providerbreadcrumb"></app-bdm-breadcrumb>
+  <!-- Ending the breadcrumb component -->
+  <!-- Main content goes here  -->
+  <div class="row">
+    <div class="col-sm-12 providercontainer">
+      <h2> Provider Network Setup</h2>
+      <div class="font-xlarge"> Network Association</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <span>Network Package:</span>
+    </div>
+    <div class="col-md-3 colPadding">
+      <span>{{networkPackage.networkPackage}}</span>
+      <br/>
+      <a (click)="restorePlans()">
+        <i class="fa fa-arrow-circle-left icons" aria-hidden="true"></i>Restore Admin Plan Defaults</a>
+      <br/>
+      <a>
+        <i class="fa fa-pencil icons" aria-hidden="true"></i>Change Package</a>
+    </div>
+
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <button class="btn btn-primary pull-right" (click)="addNewRow()">
+        <i class="fa fa-plus icons" aria-hidden="true"></i>Add Plan Specific Level</button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-primary pull-right" (click)="saveDetails()">
+        <i class="fa fa-check icons" aria-hidden="true"></i>Save Changes</button>
+    </div>
+  </div>
+
+  <!-- Provider Network Setup Table  -->
+  <div class="row shiftTableDown">
+    <div class="container col-md-12">
+      <table class="table  table-hover">
+        <thead>
+          <tr>
+            <th class="tableheader">NETWORK LEVEL</th>
+            <th class="tableheader">TYPE</th>
+            <th class="tableheader">PROFESSIONAL NETWORK SET</th>
+            <th class="tableheader">FACILTY NETWORK SET</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of networkPackage.networks ; let i=index ; let last = last ; let first=first" [class.greyBackground]="item.disable">
+            <td>
+              <span>
+                <h4 class="levelname">{{item.network_Name}}</h4>
+                <p class="">Level {{item.networkLevel}}</p>
+                <span *ngIf="!item.disable">
+                  <a aria-hidden="true" (click)="delete(item,i)">delete</a>
+                  <a *ngIf="!last" aria-hidden="true" (click)="moveLevelDown(item,i)">move down</a>
+                  <a *ngIf="!first" aria-hidden="true" (click)="moveLevelUp(item,i)">move up</a>
+                </span>
+              </span>
+            </td>
+            <td class="alignmiddle">
+              <button type="button" class="btn btn-success">{{item.networkStatus}}</button>
+            </td>
+            <td class="alignmiddle alignCenter">
+              <span class="alignCenter" *ngIf="!item.disable && item.providerNetworkSet.length==0">Plan Specific Network</span>
+              <br/>
+              <span class="alignCenter" *ngIf="!item.disable && item.providerNetworkSet.length==0">
+                <a>Add out of State Network</a>
+              </span>
+              <span class="alignCenter" *ngIf="item.disable">
+                <span *ngFor="let items of item.providerNetworkSet; let last=last; let first=first">{{items.networkSetName}}
+                  <span *ngIf="!last">,</span>
+                </span>
+              </span>
+              <span class="alignCenter" *ngIf="!item.disable && item.providerNetworkSet.length>0">{{item.providerNetworkSet.length}}</span>
+              <!-- <bdm-select [pnsvalue]="ProfessionalNetworkSet"></bdm-select>  -->
+              <!-- Modal PopUp implementation goes here for particular Professional Network Set -->
+
+            </td>
+            <td class="alignmiddle alignCenter">
+              <span class="alignCenter" *ngIf="!item.disable && item.providerNetworkSet.length==0">Plan Specific Network</span>
+              <br/>
+              <span class="alignCenter" *ngIf="!item.disable && item.providerNetworkSet.length==0">
+                <a>Add out of State Network</a>
+              </span>
+              <span class="alignCenter" *ngIf="item.disable">
+                <span *ngFor="let items of item.facilityNetworkSet; let last=last; let first=first">{{items.networkSetName}}
+                  <span *ngIf="!last">,</span>
+                </span>
+              </span>
+              <span class="alignCenter" *ngIf="!item.disable && item.providerNetworkSet.length>0">{{item.providerNetworkSet.length}}</span>
+              <!-- <bdm-select [pnsvalue]="ProfessionalNetworkSet"></bdm-select> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

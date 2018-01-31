@@ -1,0 +1,41 @@
+.tableheader{
+    font-weight: normal;
+    font-size: 13px;
+}
+.alignmiddle{
+    vertical-align: middle;
+}
+.alignCenter{
+    text-align: center;
+}
+.levelname{
+  font-weight: bold;
+  font-size :15px;
+}
+:host ::ng-deep bdm-select select{
+    width:87%;
+}
+.greyBackground{
+    background: lightgrey;
+}
+.greyBackground:hover{
+    background: lightgrey;
+}
+a{
+    font-size: smaller;
+}
+.icons{
+    margin-right: 10px;
+}
+.colPadding{
+    padding: 0px;
+}
+.colPaddingRight{
+    padding-right: 0px;
+}
+.shiftTableDown{
+    margin-top: 30px;
+}
+.font-xlarge{
+    font-size: x-large;
+}

@@ -1,0 +1,20 @@
+.navbar-default{
+    background-color:#0275B4;
+}
+.navbar-default .navbar-brand{
+    color:white;
+    margin-left: 60px;
+    font-size: 30px;
+    font-style: inherit;
+}
+.navbar-default .navbar-nav>li>a{
+    font-size:17px;
+    color:white;
+}
+.breadcrumb{
+    height:12px;
+    background-color: #3C92C0
+}
+.navbar .container-fluid {
+    border-bottom : 10px solid #3C92C0;
+}

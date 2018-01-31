@@ -1,0 +1,8 @@
+<!-- Upper level BreadCrumb Navigation -->
+<div class="col-md-2 cont p-z" *ngFor="let item of breadcrumbdata; let i = index ; let last = last ">
+  <a  [routerLink]="['']"  [ngClass]="{'active': item.active == 'true'}"
+       class="breadcrumb active">{{item.value}} 
+      </a> 
+      <i *ngIf="!last"  class="fa fa-angle-right breadcrumb-arrow" aria-hidden="true"></i>
+</div>
+<!-- Upper level BreadCrumb Navigation Ends here -->

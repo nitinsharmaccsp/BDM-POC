@@ -1,0 +1,21 @@
+<div >
+  <div class="co-insurance col-md-4">
+    <p>There are currently no coinsurance occurences defined for this plan</p>
+  <form class="form-horizontal">       
+    <div class="form-group col-md-8">
+      <label for="usr">Number of Occurences</label>
+      <input type="number" max="5" min="2" [(ngModel)]="occurencecount" 
+                    name="numberoccurence" class="form-control" id="usr">         
+    </div>
+    <div class="btn-group col-md-3">
+        <!-- <a type="button"  <a [routerLink]="['/${route-link}']">${route-text}</a>
+        ${}>Add Occurences</a> -->
+        <a class="btn btn-primary addbutton" type="button"
+              [queryParams]="{occurencecountdata:occurencecount}"
+              [routerLink]="['add-occurence']">Add Occurences
+        </a>
+       
+        </div> 
+  </form>
+</div>
+</div>

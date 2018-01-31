@@ -1,0 +1,9 @@
+<div class="col-md-3 sidebar p-0">
+  <ul class="nav nav-sidebar">
+    <li *ngFor="let navitem of navmenuitem" [class.active]="navitem.status =='true'">
+       <a [routerLink]="cost-share-setUp">{{navitem.heading}}
+           <i *ngIf="navitem.showicon" class="fa fa-check pull-right" aria-hidden="true"> </i> 
+       </a>     
+    </li>
+  </ul>
+</div>

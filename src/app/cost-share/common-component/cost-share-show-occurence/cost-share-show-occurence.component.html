@@ -1,0 +1,32 @@
+
+<div   class="panel-default col-md-10" style="margin-top:10px;">
+  <p> Coinsurance Occurences</p>   
+<div class="panel-default" >
+<div class="panel-body">
+    <table class="table-bordered col-md-12">
+      <thead>
+      <tr>
+        <th class="col-md-3">Occurance</th>
+        <th class="col-md-2">Value</th>
+        <th class="col-md-2">Level</th>
+        <th class="col-md-3">Related Scenario</th>
+        <th class="col-md-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of coinsurance; let i=index;"> <!-- add for loop here -->
+          <td class="col-md-3" (click)="scenarioData(item.occurenceId)">{{item.occurenceId}}</td>
+          <td class="col-md-2">{{item.costShareValue1}}</td>
+          <td class="col-md-2">{{item.qualifier1}}</td>
+          <td class="col-md-3"></td>
+          <td class="col-md-2"><a  [routerLink]="['../add-occurence']">edit</a>&nbsp;<a   >delete</a></td>
+      </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+<div class="col-md-10" *ngIf="occurencedata">
+     <app-cost-share-add-scenario [occurencevalue]="occurencedata"></app-cost-share-add-scenario>
+</div>    
+    

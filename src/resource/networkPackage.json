@@ -1,0 +1,147 @@
+{
+  "networkPackage": "IL1-3 TIER-BCO-BCO/PPO/NOP",
+  "networks": [
+    {
+      "networkPlan": "Plan Specfic Network",
+      "disable": false,
+      "networkLevel": 4,
+      "network_Name": "Plan Specfic Network",
+      "networkStatus": "In Network",
+      "providerNetworkSet": [
+        {
+          "networkSetName": "",
+          "providerNPI_ID": 128612369,
+          "providerTAX_ID": "",
+          "effectiveDate": "12/12/1990",
+          "terminationDate": "12/12/2999"
+        },
+        {
+          "networkSetName": "",
+          "providerNPI_ID": 123123123,
+          "providerTAX_ID": "",
+          "effectiveDate": "12/12/1993",
+          "terminationDate": "12/12/2999"
+        }
+      ],
+      "facilityNetworkSet": [
+        {
+          "networkSetName": "",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "123-123131",
+          "effectiveDate": "12/12/1990",
+          "terminationDate": "12/12/2999"
+        },
+        {
+          "networkSetName": "",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "123-123131",
+          "effectiveDate": "12/12/1990",
+          "terminationDate": "12/12/2999"
+        }
+      ]
+    },
+    {
+      "networkPlan": "Standard Network Plan",
+      "disable": true,
+      "networkLevel": 1,
+      "network_Name": "BCO",
+      "networkStatus": "In Network",
+      "providerNetworkSet": [
+        {
+          "networkSetName": "BFO",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        },
+        {
+          "networkSetName": "INJ",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        },
+        {
+          "networkSetName": "IVF",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        }
+      ],
+      "facilityNetworkSet": [
+        {
+          "networkSetName": "BCO",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        },
+        {
+          "networkSetName": "DCC",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        }
+      ]
+    },
+    {
+      "networkPlan": "Alternate Network Plan",
+      "disable": true,
+      "networkLevel": 2,
+      "network_Name": "BCO",
+      "networkStatus": "In Network",
+      "providerNetworkSet": [
+        {
+          "networkSetName": "PPO",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        }
+      ],
+      "facilityNetworkSet": [
+        {
+          "networkSetName": "PPO",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        }
+      ]
+    },
+    {
+      "networkPlan": "Standard Network Plan",
+      "disable": true,
+      "networkLevel": 3,
+      "network_Name": "NOP",
+      "networkStatus": "Out of Network",
+      "providerNetworkSet": [
+        {
+          "networkSetName": "NOP",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        }
+      ],
+      "facilityNetworkSet": [
+        {
+          "networkSetName": "PAR",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        },
+        {
+          "networkSetName": "NOP",
+          "providerNPI_ID": "",
+          "providerTAX_ID": "",
+          "effectiveDate": "",
+          "terminationDate": ""
+        }
+      ]
+    }
+  ]
+}

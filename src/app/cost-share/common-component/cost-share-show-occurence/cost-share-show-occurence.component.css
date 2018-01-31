@@ -1,0 +1,66 @@
+.align-left{
+    margin-left:14px;
+}
+.btn-group button{
+    margin-top:24px;
+}
+ul li {
+  display: inline-block;
+}
+.fade{
+    font-size: 20px;
+}
+.form-control{
+    height: 28px;
+}
+.occurence td {
+    border-top: none;
+}
+.occurence th{
+    border-bottom: none;
+}
+.p-l-0
+{
+padding-left: 0px
+} 
+.margin-right-3
+{
+    margin-right: 3px;
+} 
+tr th{
+    padding:10px;
+}
+tr td{
+    padding:10px;
+}
+/* .control .occur{
+    margin-left:245px;
+    margin-right:65px;
+} */
+
+.footer{
+    margin-top:250px;
+}
+.margin-10{
+    margin-top:10px;
+}
+.m-r-3
+{
+    margin-right:3px;
+}
+.p-0
+{
+    padding: 0px;
+}
+.p-15
+{
+    padding: 15px;
+}
+.p-t-15
+{
+    padding-top: 15px;
+}
+.inline-grid
+{
+    display: inline-grid;
+}

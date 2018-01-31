@@ -1,0 +1,40 @@
+.container-fluid .row , .sidebar ul{
+    margin-right:-15px;
+    margin-left:-15px;
+}
+.sidebar ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.p-0{
+    padding:0px;
+}
+.sidebar ul li a{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    color:black;
+}
+.sidebar{
+    position: fixed;
+    top: 51px;    
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+    background-color: white;
+}
+.nav-sidebar i{
+    color:green;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top:3px;
+}

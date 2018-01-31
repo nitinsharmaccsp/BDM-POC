@@ -1,0 +1,12 @@
+<!-- Upper level BreadCrumb Navigation -->
+<div class="col-md-12 p-z p-b-30">
+  <button type="button" class="btn-primary" style="display:inline-block">Cost Shares</button>
+  <a  [routerLink]="['']" *ngFor="let item of costbreadcrumb; let i = index " 
+       class="cost-breadcrumb">{{item}} <i *ngIf="i < 8"  class="fa fa-angle-right breadcrumb-arrow" aria-hidden="true"></i>
+      </a> 
+</div>
+<!-- Upper level navigation ends here  -->
+  
+<!-- Router outlet to route different common component specifically for cost share  -->
+ <router-outlet></router-outlet>
+  <!-- Router outlet ends over here -->
